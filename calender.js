@@ -1,4 +1,5 @@
 var dat = new Date();
+dat.setDate(1)
 
 var months_arr=["January","Febuary","March","April","May","June","July","August","September","October","November","December"];
 
