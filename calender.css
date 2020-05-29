@@ -38,23 +38,31 @@ margin:0;
   padding:7px 0px;
   
 }
-.weekdays div{
-  width:14.28%;
-  text-align:center;
-}
+
 .days{
   display:flex;
   flex-wrap:wrap;
-  text-align:center;
   font-weight:300;
   padding:10px 0px;
 }
 .days div{
-  width:14.28%;
+  
   margin-bottom:10px;
   padding:10px 0px;
+  transistion:all 0.4s;
+}
+.weekdays div,
+.days div{
+  width:14.28%;
+  text-align:center;
+}
+.days div:hover{
+  background-color:#dfe6e9;
+  cursor:pointer;
 }
 .today{
   background-color:#27ae60;
   color:#fff;
 }
+.prev_date{
+color:#555}
