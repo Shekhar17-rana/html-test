@@ -10,7 +10,7 @@ document.getElementById("month").innerHTML = months_arr[dat.getMonth()];
 
 var cells = "";
 
-for(i=1; i<= endDate; i++){
+for(i=1; i<= 31; i++){
   cells += "<div>"+i+"</div>";
 }
 
