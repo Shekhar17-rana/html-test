@@ -12,4 +12,4 @@ for(i=1;i<31;i++){
   cells += "<div>"+i+"</div>";
 }
 
-document.getElementByClassNmae("days")
+document.getElementsByClassNmae("days")[0].innerHTML = cells;
