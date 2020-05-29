@@ -82,4 +82,9 @@ font-weight:500;}
   height:50px;
   background-color:rgba(0,0,0,0.1);
   border-radius:50%;
+  transistion:all 0.4s;
 }
+.prev:hover,
+.next:hover{
+  background-color:rgba(0,0,0,0.3);
+  cursor:pointer;
