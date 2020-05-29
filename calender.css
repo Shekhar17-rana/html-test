@@ -32,3 +32,14 @@ margin:0;
   padding:40px 30px;
 }
   
+.weekdays{
+  display:flex;
+  background-color:#27ae60;
+  color:#fff;
+  padding:7px 0px;
+  
+}
+.weekdays div{
+  width:14.28%;
+  text-align:center;
+}
