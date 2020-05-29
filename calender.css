@@ -9,8 +9,8 @@ margin:0;
 }
 .wrapper{
   display:flex;
-  width:50vw;
-  height:50vh;
+  width:100vw;
+  height:100vh;
    background-color:#dfe6e9;
 }
 
