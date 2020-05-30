@@ -1,22 +1,21 @@
  
 var dat1 = new Date();
-var dat = new Date();
 function RenderDate(){
- 
-dat.setDate(1);
 
-var day = dat.getDay();
+dat1.setDate(1);
+
+var day = dat1.getDay();
 
 var months_arr=["January","Febuary","March","April","May","June","July","August","September","October","November","December"];
 
-var endDate = new Date(dat.getFullYear(),dat.getMonth()+1,0).getDate();
+var endDate = new Date(dat1.getFullYear(),dat1.getMonth()+1,0).getDate();
 
-var prevDate = new Date(dat.getFullYear(),dat.getMonth(),0).getDate();
+var prevDate = new Date(dat1.getFullYear(),dat1.getMonth(),0).getDate();
 var today = new Date();
 
 document.getElementById("date_str").innerHTML = dat1.toDateString();
 
-document.getElementById("month").innerHTML = months_arr[dat.getMonth()];
+document.getElementById("month").innerHTML = months_arr[dat1.getMonth()];
 var cells = "";
 
 
@@ -38,11 +37,11 @@ document.getElementsByClassName("days")[0].innerHTML = cells;
   
 function moveDate(para){
  if(para == 'prev'){
-   dat.setMonth(dat.getMonth()-1);
+   dat1.setMonth(dat1.getMonth()-1);
   RenderDate()}
  
  else if(para == 'next'){
-  dat.setMonth(dat.getMonth()+1);
+  dat1.setMonth(dat1.getMonth()+1);
   
   }
  RenderDate();
