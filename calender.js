@@ -1,4 +1,5 @@
-var dat = new Date();
+function RenderDate(){
+  var dat = new Date();
 dat.setDate(1)
 
 var day = dat.getDay();
@@ -30,3 +31,7 @@ for(i=1; i<= 31; i++){
 }
 
 document.getElementsByClassName("days")[0].innerHTML = cells;
+}
+  
+function moveDate(para){
+}
