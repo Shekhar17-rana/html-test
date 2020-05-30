@@ -1,6 +1,8 @@
+ var dat = new Date();
+
 function RenderDate(){
-  var dat = new Date();
-dat.setDate(1)
+ 
+dat.setDate(1);
 
 var day = dat.getDay();
 
