@@ -11,7 +11,7 @@ var months_arr=["January","Febuary","March","April","May","June","July","August"
 var endDate = new Date(dat.getFullYear(),dat.getMonth()+1,0).getDate();
 
 var prevDate = new Date(dat.getFullYear(),dat.getMonth(),0).getDate();
-var today = new Date().getDate();
+var today = new Date();
 
 document.getElementById("date_str").innerHTML = dat.toDateString();
 
@@ -24,7 +24,7 @@ for(x=day; x>0;x--){
 }
 
 for(i=1; i<= 31; i++){
-  if(i == today){
+  if(i == today.getDate() && dat.getMonth() == today.getMonth()){
     cells += "<div class='today'>"+i+"</div>";
   }
    else{
