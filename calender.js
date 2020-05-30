@@ -1,4 +1,5 @@
  var dat = new Date();
+var dat1 = new Date();
 
 function RenderDate(){
  
@@ -13,7 +14,7 @@ var endDate = new Date(dat.getFullYear(),dat.getMonth()+1,0).getDate();
 var prevDate = new Date(dat.getFullYear(),dat.getMonth(),0).getDate();
 var today = new Date();
 
-document.getElementById("date_str").innerHTML = dat.toDateString();
+document.getElementById("date_str").innerHTML = dat1.toDateString();
 
 document.getElementById("month").innerHTML = months_arr[dat.getMonth()];
 var cells = "";
