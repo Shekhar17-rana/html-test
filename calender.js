@@ -37,7 +37,12 @@ document.getElementsByClassName("days")[0].innerHTML = cells;
   
 function moveDate(para){
  if(para == 'prev'){
-   dat.setMonth(dat.getMonth()-1)
+   dat.setMonth(dat.getMonth()-1);
   RenderDate()}
+ 
+ else if(para == 'next'){
+  dat.setMonth(dat.getMonth()+1);
+  }
+ RenderDate();
  
 }
