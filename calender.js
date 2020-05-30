@@ -23,7 +23,7 @@ for(x=day; x>0;x--){
   cells += "<div class='prev_date'>"+(prevDate-x+1)+"</div>";
 }
 
-for(i=1; i<= 31; i++){
+for(i=1; i<= endDate; i++){
   if(i == today.getDate() && dat.getMonth() == today.getMonth()){
     cells += "<div class='today'>"+i+"</div>";
   }
