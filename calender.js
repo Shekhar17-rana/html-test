@@ -1,49 +1,54 @@
- 
-var dat1 = new Date();
-function RenderDate(){
+var dt = new Date();
+        function renderDate() {
+            dt.setDate(1);
+            var day = dt.getDay();
+            var today = new Date();
+            var endDate = new Date(
+                dt.getFullYear(),
+                dt.getMonth() + 1,
+                0
+            ).getDate();
 
-dat1.setDate(1);
+            var prevDate = new Date(
+                dt.getFullYear(),
+                dt.getMonth(),
+                0
+            ).getDate();
+            var months = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ]
+            document.getElementById("month").innerHTML = months[dt.getMonth()];
+            document.getElementById("date_str").innerHTML = dt.toDateString();
+            var cells = "";
+            for (x = day; x > 0; x--) {
+                cells += "<div class='prev_date'>" + (prevDate - x + 1) + "</div>";
+            }
+            console.log(day);
+            for (i = 1; i <= endDate; i++) {
+                if (i == today.getDate() && dt.getMonth() == today.getMonth()) cells += "<div class='today'>" + i + "</div>";
+                else
+                    cells += "<div>" + i + "</div>";
+            }
+            document.getElementsByClassName("days")[0].innerHTML = cells;
 
-var day = dat1.getDay();
+        }
 
-var months_arr=["January","Febuary","March","April","May","June","July","August","September","October","November","December"];
-
-var endDate = new Date(dat1.getFullYear(),dat1.getMonth()+1,0).getDate();
-
-var prevDate = new Date(dat1.getFullYear(),dat1.getMonth(),0).getDate();
-var today = new Date();
-
-document.getElementById("date_str").innerHTML = dat1.toDateString();
-
-document.getElementById("month").innerHTML = months_arr[dat1.getMonth()];
-var cells = "";
-
-
-for(x=day; x>0;x--){
-  cells += "<div class='prev_date'>"+(prevDate-x+1)+"</div>";
-}
-
-for(i=1; i<= endDate; i++){
-  if(i == today.getDate() && dat.getMonth() == today.getMonth()){
-    cells += "<div class='today'>"+i+"</div>";
-  }
-   else{
-     cells += "<div>"+i+"</div>";
-   }
-}
-
-document.getElementsByClassName("days")[0].innerHTML = cells;
-}
-  
-function moveDate(para){
- if(para == 'prev'){
-   dat1.setMonth(dat1.getMonth()-1);
-  RenderDate()}
- 
- else if(para == 'next'){
-  dat1.setMonth(dat1.getMonth()+1);
-  
-  }
- RenderDate();
- 
-}
+        function moveDate(para) {
+            if(para == "prev") {
+                dt.setMonth(dt.getMonth() - 1);
+            } else if(para == 'next') {
+                dt.setMonth(dt.getMonth() + 1);
+            }
+            renderDate();
+        }
