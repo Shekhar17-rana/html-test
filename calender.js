@@ -1,8 +1,8 @@
  
 var dat1 = new Date();
-
+var dat = new Date();
 function RenderDate(){
- var dat = new Date();
+ 
 dat.setDate(1);
 
 var day = dat.getDay();
@@ -38,11 +38,11 @@ document.getElementsByClassName("days")[0].innerHTML = cells;
   
 function moveDate(para){
  if(para == 'prev'){
-   dat1.setMonth(dat1.getMonth()-1);
+   dat.setMonth(dat.getMonth()-1);
   RenderDate()}
  
  else if(para == 'next'){
-  dat.setMonth(dat1.getMonth()+1);
+  dat.setMonth(dat.getMonth()+1);
   
   }
  RenderDate();
