@@ -16,7 +16,7 @@ var cells = "";
 
 
 for(x=day; x>0;x--){
-  cells += "<div>"+prevDate+"</div>";
+  cells += "<div class='pev_date'>"+(prevDate-x)+"</div>";
 }
 
 for(i=1; i<= 31; i++){
