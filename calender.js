@@ -3,31 +3,10 @@ var dt = new Date();
             dt.setDate(1);
             var day = dt.getDay();
             var today = new Date();
-            var endDate = new Date(
-                dt.getFullYear(),
-                dt.getMonth() + 1,
-                0
-            ).getDate();
+            var endDate = new Date(dt.getFullYear(),dt.getMonth() + 1,0).getDate();
 
-            var prevDate = new Date(
-                dt.getFullYear(),
-                dt.getMonth(),
-                0
-            ).getDate();
-            var months = [
-                "January",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July",
-                "August",
-                "September",
-                "October",
-                "November",
-                "December"
-            ]
+            var prevDate = new Date(dt.getFullYear(),dt.getMonth(),0).getDate();
+            var months = ["January","February","March","April","May","June","July","August","September","October","Novembe","December"];
             document.getElementById("month").innerHTML = months[dt.getMonth()];
             document.getElementById("date_str").innerHTML = dt.toDateString();
             var cells = "";
